@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.input {
+    background-color: #fff;
+    padding: 8px;
+    border-radius: var(--radius);
+    border: none;
+    font-size: 16px;
+    min-width: 350px;
+    border: 1px solid #e4e4e4;
+}
+
+.input.dark{
+    background-color: var(--dark-blue-light);
+    border: 1px solid var(--gray);
+    color: var(--white);
+}

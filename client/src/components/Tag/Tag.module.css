@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    background-color: var(--white);
+    color: var(--test);
+    width: fit-content;
+    font-size: 12px;
+    font-weight: 400;
+    border: 1px solid #c1c9d1;
+}
+
+.container.blue {
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    background-color: #63abff26;
+}

@@ -1,0 +1,53 @@
+import { useContext, useState } from 'react'
+import { Icon } from "@iconify/react"
+import icons from "../../utils/icons"
+import Popover from '../Popover/Popover'
+import classNames from 'classnames'
+import classes from "./CopyButton.module.css"
+import { AppContext } from '../../context/AppContextProvider'
+
+type PropsType = {
+    className?: string
+    value: string
+}
+
+/**
+ * CopyButton component
+ * 
+ * @param props - Component props
+ * @param props.className - Classname
+ * @param props.value - Text to copy
+ * @returns CopyButton component
+ */
+const CopyButton = ({
+    className = "",
+    value,
+}: PropsType) => {
+    const [isClick, setIsClick] = useState(false)
+
+    const { isDark } = useContext(AppContext)
+
+    const onClick = () => {
+        navigator.clipboard.writeText(value)
+        setIsClick(true)
+    }
+
+    const buttonStyles = classNames(classes.container, className, {
+        [classes.dark]: isDark
+    })
+
+    return (
+        <button className={buttonStyles} onClick={onClick}>
+            {isClick ?
+                (
+                    <Popover element={<Icon icon={icons.copyCheck} width={20} height={20} />}>
+                        Copied!
+                    </Popover>
+                ) :
+                <Icon icon={icons.copy} width={20} height={20} />
+            }
+        </button>
+    )
+}
+
+export default CopyButton

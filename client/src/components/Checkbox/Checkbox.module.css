@@ -1,0 +1,35 @@
+.input {
+    /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  background-color: #F8F8F8;
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+  border: 1px solid #D9D9D9;
+  outline: none;
+  cursor: pointer;
+}
+
+.input.dark {
+    background-color: var(--dark-blue-light);
+    border: 1px solid var(--gray);
+    color: var(--white);
+}
+
+.input:checked {
+  position: relative;
+}
+
+.input.input:checked::after{
+    content: '';
+    position: absolute;
+    height: 13px;
+    width: 13px;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    background-color: var(--blue);
+    border-radius: 3px;
+}

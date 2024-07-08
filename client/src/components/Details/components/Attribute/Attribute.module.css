@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container.dark {
+    color: white;
+}
+
+.label{
+    font-weight: 500;
+    color: var(--test);
+}
+
+.label.dark {
+    color: #c9c9c9;
+}
+
+.value{
+    max-width: 20ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--black);
+    font-weight: 400;
+}
+
+.value.dark {
+    color: white;
+}
+
+.button{
+    font-weight: 500;
+    font-size: 16px;
+}

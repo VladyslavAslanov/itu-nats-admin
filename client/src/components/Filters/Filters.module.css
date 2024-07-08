@@ -1,0 +1,29 @@
+.container {
+    margin: 48px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-right: 20px;
+}
+
+.container.dark svg {
+    color: white;
+}
+
+.actions{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+}

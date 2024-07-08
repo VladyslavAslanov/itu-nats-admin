@@ -1,0 +1,87 @@
+.aside {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    bottom: 8px;
+    width: 400px;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: var(--radius);
+}
+
+.aside.dark {
+    background-color: var(--dark-blue-light);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header h4 {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.header svg {
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    overflow-y: auto;
+    flex-direction: column;
+    flex: 1;
+    border-radius: var(--radius);
+    gap: 8px;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: auto;
+}
+
+.fornContainer {
+    overflow-y: auto;
+    flex-direction: column;
+    flex: 1;
+    border-radius: var(--radius);
+}
+.formContainer {
+    max-height: 90px;
+}
+.formContainer > * {
+    display: block;
+  }
+
+.online, .offline{
+    position: relative;
+    font-size: 12px;
+    font-weight: 400;
+    color: #DDD;
+}
+
+.online::after, .offline::after {
+    content: "";
+    position: absolute;
+    right: -16px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.online::after {
+background-color: #6dff48;
+}
+
+.offline::after {
+background-color: #fa3636;
+}

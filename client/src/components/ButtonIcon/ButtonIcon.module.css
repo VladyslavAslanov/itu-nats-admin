@@ -1,0 +1,9 @@
+.container {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.container.dark {
+    color: white;
+}

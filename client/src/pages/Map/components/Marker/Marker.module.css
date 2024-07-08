@@ -1,0 +1,24 @@
+.container {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.container.dark {
+    background-color: #52565b;
+}
+.container.dark:hover {
+    background-color: #44474a;
+}
+
+.container:hover {
+    background-color: #eeeeee;
+}
